@@ -1,10 +1,9 @@
 FROM node:18
 
-WORKDIR /app
+WORKDIR /inventory-services
 
-COPY package*.json ./
-RUN npm install
 COPY . .
+RUN npm install
 
 EXPOSE 3000
 

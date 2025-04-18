@@ -1,9 +1,9 @@
 FROM node:18
 
-WORKDIR /app
+WORKDIR /api-gateway
 
 COPY . .
-RUN npm i
+RUN npm install
 
 EXPOSE 3000
 
