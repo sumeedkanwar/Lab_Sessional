@@ -1,6 +1,6 @@
 FROM node:18
 
-WORKDIR /customer-service
+WORKDIR /customer-services
 
 COPY . .
 RUN npm install

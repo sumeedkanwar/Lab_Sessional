@@ -1,6 +1,6 @@
 FROM node:18
 
-WORKDIR /payment-service
+WORKDIR /payment-services
 
 COPY . .
 RUN npm install

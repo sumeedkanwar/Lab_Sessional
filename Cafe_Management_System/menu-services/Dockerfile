@@ -1,6 +1,6 @@
 FROM node:18
 
-WORKDIR /menu-service
+WORKDIR /menu-services
 
 COPY . .
 RUN npm install
