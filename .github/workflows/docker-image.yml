@@ -13,11 +13,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build the Docker image
-        run: docker build . --file Cafe_Management_System/api-gateway/Dockerfile --tag api-gateway:$(date +%s)
+        run: docker build . --file Cafe_Management_System/customer-services/Dockerfile --tag customer-services:$(date +%s)
 
       - uses: actions/checkout@v4
       - name: Build the Docker image
-        run: docker build . --file Cafe_Management_System/customer-services/Dockerfile --tag customer-services:$(date +%s)
+        run: docker build . --file Cafe_Management_System/api-gateway/Dockerfile --tag api-gateway:$(date +%s)
 
       - uses: actions/checkout@v4
       - name: Build the Docker image
