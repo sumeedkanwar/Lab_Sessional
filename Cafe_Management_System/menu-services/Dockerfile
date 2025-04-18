@@ -2,9 +2,12 @@ FROM node:18
 
 WORKDIR /menu-services
 
-COPY . .
+COPY package*.json ./
+
 RUN npm install
 
-EXPOSE 3000
+COPY . .
 
-CMD ["node", "index.js"]
+EXPOSE 3001
+
+CMD [ "node", "index.js" ]  

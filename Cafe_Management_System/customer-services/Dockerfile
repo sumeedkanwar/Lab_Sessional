@@ -1,10 +1,14 @@
-FROM node:18
+FROM node:18-alpine
 
 WORKDIR /customer-services
 
-COPY . .
+
+COPY package*.json ./
+
 RUN npm install
 
-EXPOSE 3000
+COPY . .
 
-CMD ["node", "index.js"]
+EXPOSE 3005
+
+CMD [ "node", "index.js" ]
