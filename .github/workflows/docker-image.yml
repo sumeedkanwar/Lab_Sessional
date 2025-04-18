@@ -13,4 +13,24 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build the Docker image
-        run: docker build ./Cafe_Mangement_System/ --file ./Dockerfile --tag my-image-name:$(date +%s)
+        run: docker build . --file Cafe_Mangement_System/api-gateway/Dockerfile --tag api-gateway:$(date +%s)
+
+      - uses: actions/checkout@v4
+      - name: Build the Docker image
+        run: docker build . --file Cafe_Mangement_System/customer-service/Dockerfile --tag customer-service:$(date +%s)
+
+      - uses: actions/checkout@v4
+      - name: Build the Docker image
+        run: docker build . --file Cafe_Mangement_System/inventory-service/Dockerfile --tag inventory-service:$(date +%s)
+
+      - uses: actions/checkout@v4
+      - name: Build the Docker image
+        run: docker build . --file Cafe_Mangement_System/menu-service/Dockerfile --tag menu-service:$(date +%s)
+
+      - uses: actions/checkout@v4
+      - name: Build the Docker image
+        run: docker build . --file Cafe_Mangement_System/order-service/Dockerfile --tag order-service:$(date +%s)
+
+      - uses: actions/checkout@v4
+      - name: Build the Docker image
+        run: docker build . --file Cafe_Mangement_System/payment-service/Dockerfile --tag payment-service:$(date +%s)
